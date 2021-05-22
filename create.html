@@ -40,90 +40,98 @@
             <hr>
         </div>
 
-        <table class="text-center">
-            <tr class="text-L text-Bold match-Dark">
-                <td>Bun</td>
-            </tr>
+        <form action="" id="BurgerSubmission">
+            <table class="text-center">
+                <tr class="text-L text-Bold match-Dark">
+                    <td>Bun</td>
+                    
+                </tr>
+                <tr><td><p class="errMsg" id="bunErr" ></p></td></tr>
 
-            <tr class="spaceUnder">
-                <td>
-                    <input type="radio" name="Bun" id="wheatBun">
-                    <label for="wheatBun">Wheat Bun</label>
-                    <input type="radio" name="Bun" id="RegBun">
-                    <label for="RegBun">Regular Bun</label>
-                </td>
-            </tr>
+                <tr class="spaceUnder">
+                    <td>
+                        <input type="radio" name="Bun" id="wheatBun" value="Wheat">
+                        <label for="wheatBun">Wheat Bun</label>
+                        <input type="radio" name="Bun" id="RegBun" value="Reg">
+                        <label for="RegBun">Regular Bun</label>
+                    </td>
+                </tr>
 
-            <tr class="text-L text-Bold match-Dark">
-                <td >    
-                    Patty
-                </td>
-            </tr>
+                <tr class="text-L text-Bold match-Dark">
+                    <td>
+                        Patty
+                    </td>
+                </tr>
 
-            <tr class="spaceUnder">
-                <td>
-                    <input type="radio" name="Patty" id="Beef">
-                    <label for="Beef">Beef</label>
-                    <input type="radio" name="Patty" id="Chicken">
-                    <label for="Chicken">Chicken</label>
-                    <input type="radio" name="Patty" id="Fish">
-                    <label for="Fish">Fish</label>
-                </td>
-            </tr>
-            <tr class="text-L text-Bold match-Dark">
-                <td>Sauce</td>
-            </tr>
+                <tr class="spaceUnder">
+                    <td>
+                        <input type="radio" name="Patty" id="Beef" value="Beef">
+                        <label for="Beef">Beef</label>
+                        <input type="radio" name="Patty" id="Chicken" value="Chicken">
+                        <label for="Chicken">Chicken</label>
+                        <input type="radio" name="Patty" id="Fish" value="Fish">
+                        <label for="Fish">Fish</label>
+                    </td>
+                </tr>
+                <tr class="text-L text-Bold match-Dark">
+                    <td>Sauce</td>
+                </tr>
 
-            <tr class="spaceUnder">
-                <td>
-                    <input type="checkbox" name="Sauce" id="Bbq">
-                    <label for="Bbq">Barberque</label>
-                    <input type="checkbox" name="Sauce" id="Mushroom">
-                    <label for="Mushroom">Mushroom</label>
-                    <input type="checkbox" name="Sauce" id="Chilli ">
-                    <label for="Chilli ">Chilli </label>
-                    <input type="checkbox" name="Sauce" id="Cheese">
-                    <label for="Cheese">Cheese</label>
-                </td>
-            </tr>
+                <tr class="spaceUnder">
+                    <td>
+                        <input type="checkbox" name="Sauce" id="Bbq" value="Barberque">
+                        <label for="Bbq">Barberque</label>
+                        <input type="checkbox" name="Sauce" id="Mushroom" value="Mushroom">
+                        <label for="Mushroom">Mushroom</label>
+                        <input type="checkbox" name="Sauce" id="Chilli" value="Chilli">
+                        <label for="Chilli">Chilli </label>
+                        <input type="checkbox" name="Sauce" id="Cheese" value="Cheese">
+                        <label for="Cheese">Cheese</label>
+                    </td>
+                </tr>
 
-            <tr class="text-L text-Bold match-Dark">
-                <td>Extras</td>
-            </tr>
+                <tr class="text-L text-Bold match-Dark">
+                    <td>Extras</td>
+                </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="Extras" id="Pickles">
+                        <input type="checkbox" name="Extras" id="Pickles" value="pickles">
                         <label for="Pickles">Pickles</label>
                     </td>
                 </tr>
-    
+
                 <tr>
                     <td>
-                        <input type="checkbox" name="Extras" id="Tomatoes">
+                        <input type="checkbox" name="Extras" id="Tomatoes" value="Tomatoes">
                         <label for="Tomatoes">Tomatoes</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="Extras" id="Chilli ">
-                        <label for="Chilli ">Chilli </label>
+                        <input type="checkbox" name="Extras" id="ExtChilli" value="ExtChilli">
+                        <label for="ExtChilli">Chilli </label>
                     </td>
                 </tr>
-    
+
+                <tr class="spaceUnder">
+                    <td>
+                        <input type="checkbox" name="Extras" id="ExtCheese" value="ExtCheese">
+                        <label for="ExtCheese">Cheese</label>
+                    </td>
+                </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="Extras" id="Cheese">
-                        <label for="Cheese">Cheese</label>
+                        <button type="submit" class="button" id="CreateBtn" value="value">Create</button>
                     </td>
                 </tr>
-            </div>
-            
-        </table>
+
+            </table>
+        </form>
     </div>
-    <div class="container" id="Image">
+    <section class="container" id="Image">
 
 
-    </div>
+    </section>
 
     <footer>
         <h6>CONNECT WITH US</h6>
