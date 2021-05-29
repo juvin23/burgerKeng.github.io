@@ -5,7 +5,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 96vw;
+    width: 100vw;
     align-items: center;
     justify-content: space-around;
     margin: 0;
@@ -83,6 +83,7 @@ body {
 }
 
 .button {
+    cursor: pointer;
     font-size: 18px;
     padding: 10px;
     text-decoration: none;
@@ -146,6 +147,7 @@ Create.html css start here
     font-size: 30px;
 }
 
+
 .text-left {
     text-align: left;
 }
@@ -160,6 +162,14 @@ Create.html css start here
 
 #createForm table tr.spaceUnder>td {
     padding-bottom: 20px;
+}
+
+#preview {
+    padding-bottom: 40px;
+}
+
+#preview img {
+    width: 400px;
 }
 
 label {

@@ -43,10 +43,11 @@
         <form action="" id="BurgerSubmission">
             <table class="text-center">
                 <tr class="text-L text-Bold match-Dark">
-                    <td>Bun</td>
-                    
+                    <td>Bun</td>                    
                 </tr>
-                <tr><td><p class="errMsg" id="bunErr" ></p></td></tr>
+                <tr>
+                    <td><p class="errMsg" id="bunErr" ></p></td>
+                </tr>
 
                 <tr class="spaceUnder">
                     <td>
@@ -62,6 +63,9 @@
                         Patty
                     </td>
                 </tr>
+                <tr>
+                    <td><p class="errMsg" id="pattyErr" ></p></td>
+                </tr>
 
                 <tr class="spaceUnder">
                     <td>
@@ -75,6 +79,9 @@
                 </tr>
                 <tr class="text-L text-Bold match-Dark">
                     <td>Sauce</td>
+                </tr>
+                <tr>
+                    <td><p class="errMsg" id="sauceErr" ></p></td>
                 </tr>
 
                 <tr class="spaceUnder">
@@ -121,16 +128,24 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit" class="button" id="CreateBtn" value="value">Create</button>
+                        <button type="submit" class="button" id="CreateBtn" value="submit">Create</button>
                     </td>
                 </tr>
-
             </table>
         </form>
     </div>
-    <section class="container" id="Image">
 
-
+    <section class="container" id="preview">
+        <div id="topBunImg"></div>
+        <div id="tomatoesImg"></div>
+        <div id="picklesImg"></div>
+        <div id="pattyImg"></div>  
+        <div id="cheeseImg"></div>
+        <div id="lettuceImg"></div> 
+        <div id="extrasImg"></div>   
+        <div id="baseBunImg"></div> 
+        <div id="sauceChoice" class="match-Dark text-L text-center">
+        </div>
     </section>
 
     <footer>
