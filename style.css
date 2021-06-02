@@ -47,18 +47,25 @@ body {
 
 
 .card-Wrapper {
+    padding: 15px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
 .card {
     display: flex;
+    flex-direction: column;
     width: 300px;
     color: black;
     text-align: center;
+    align-items: center;
+}
+
+.Photo {
+    border-radius: 50%;
 }
 
 .product-Wrapper {
@@ -170,6 +177,16 @@ Create.html css start here
 
 #preview img {
     width: 400px;
+}
+
+#Dev-Photos img {
+    width: 150px;
+}
+
+#about {
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 20px;
 }
 
 label {
