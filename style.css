@@ -40,8 +40,16 @@ body {
     height: 100%;
 }
 
+.nav-item a.active {
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
 #Panel {
-    background-color: aliceblue;
+    background-color: hsla(47, 27%, 80%, 0.644);
     font: bold 25px helvetica;
 }
 
