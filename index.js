@@ -1,6 +1,9 @@
-$('document').ready(main)
+$('document').ready(main);
 
-const CART_KEY = "CART_STORAGE";
+
+function main(){
+    initItems();
+}
 
 const PRODUCT = [
     {id:'Burger1', cat:'Burger', name :'Burger Alaska', price : 57000, img : "imgs/Product/Burger/Burger1.png"},
@@ -9,44 +12,28 @@ const PRODUCT = [
     {id:'side1', cat:'SideDish',name :'Fries', price : 37000, img : "imgs/Product/SideDish/fries.png"}
 ];
 
-const SIDE = [
-   
-];
-
-const CART = [];
-
-function main(){
-    initItems();
-}
-
-
 function initItems(){
-    const burger_list = $('#burgerList');
-    const side_list = $('#sideList');
-
-    PRODUCT.forEach(key =>{
-        if(key.cat === 'Burger'){
-            burger_list.append(
-                `<div class="product">
-                    <img src= "${key.img}">
-                    <H2>${key.name}</H2>
-                    <H3>Rp.${key.price}</H3>
-                    <button onClick=addCart("${key.id}") class="button" > ADD TO CART </button> 
-                </div> `
-                )
-        }else{
-            side_list.append(
-                `<div class="product">
-                    <img src= ${key.img}>
-                    <H3 class = "match-Dark">${key.name}</H3>
-                    <H3>Rp.${key.price}</H3>
-                    <button class="button" onClick=addCart("${key.id}")> ADD TO CART </button>
-                </div> `
-                )
-        }
-
-    })
+    let recom = $('#recomendation');
+    let best = $('#bestSeller');
+    for(i =0;i<3;i++){
+        e = PRODUCT[i];
+        recom.append(
+        `<div class="product">
+            <img src="${e.img}">
+            <H3>${e.name}</H3>
+            <button class="button" onClick=addCart("${e.id}")> ADD TO CART </button>
+        </div>`
+    )}
+    best.append(
+        `<div class="product">
+        <img src="${PRODUCT[2].img}">
+        <H3>${PRODUCT[2].name}</H3>
+        <button class="button" onClick=addCart("${PRODUCT[2].id}")> ADD TO CART </button>
+        </div>`
+    )
 }
+
+let CART_KEY = "CART_STORAGE";
 
 function addCart(id){
     const storage = getLocal(CART_KEY);

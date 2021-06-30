@@ -1,7 +1,9 @@
 let $emptyMsg = "this field cannot be empty";
 let $invalidMsg = "field invalid";
 
-window.onload = function(){
+$('document').ready(main);
+
+function main(){
     let BurgerSubmission = document.getElementById("BurgerSubmission");
     
     BurgerSubmission.addEventListener("submit", createBurger)
@@ -60,10 +62,12 @@ function createBurger(e){
     document.getElementById("pattyImg").innerHTML = "<img src=\"imgs/ingredient/patty/" + patty + ".png\">";
     document.getElementById("topBunImg").innerHTML = "<img src=\"imgs/ingredient/bun/TopBun.png\">";
     
+    document.getElementById("extrasImg").innerHTML="";
     extras.forEach(ex => {
         if(ex !== "ExtChilli")document.getElementById("extrasImg").innerHTML += "<div><img src=\"imgs/ingredient/" + ex + ".png\"></div>";
     });
 
+    document.getElementById("sauceChoice").innerHTML = "";
     document.getElementById("sauceChoice").innerHTML += "Sauce Of Choice<ul>";
     sauce.forEach(sa =>{
         document.getElementById("sauceChoice").innerHTML += `

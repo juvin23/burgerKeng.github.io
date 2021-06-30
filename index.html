@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Keng</title>
     <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -31,6 +33,9 @@
         <div class="nav-item">
             <a href="ourTeam.html">Our Team</a>
         </div>
+        <div class="nav-item">
+            <a href="cart.html">Cart</a>
+        </div>
     </nav>
 
     <section id="Panel">
@@ -38,35 +43,14 @@
                 <h3 class="match-title text-L">Recomendation</h3>
                 <hr style="width: 100%;">
 
-            <div class="product-Wrapper">
-                <div class="product">
-                    <img src="imgs/Product/Burger/Burger1.png" alt="">
-                    <H3>Burger besar Alaska</H3>
-                    <a href="" class="button"> ADD TO CART </a>
-                </div>
-                <div class="product">
-                    <img src="imgs/Product/Burger/Burger2.png" alt="">
-                    <H3>Burger besar Alaska 2</H3>
-                    <a href="" class="button"> ADD TO CART </a>
-                </div>
-
-                <div class="product">
-                    <img src="imgs/Product/SideDish/fries.png" alt="">
-                    <H3>kentang panjang Alaska 3</H3>
-                    <a href="" class="button"> ADD TO CART </a>
-                </div>
+            <div class="product-Wrapper" id="recomendation">
+                
             </div>
 
             <h1 class="match-title">Best Seller</h1>
             <hr style="width: 100%;">
 
-            <div class="product-Wrapper">
-
-                <div class="product">
-                    <img src="imgs/Product/Burger/Burger1.png" alt="">
-                    <H3>Burger besar Alaska 3</H3>
-                    <a href="" class="button"> ADD TO CART </a>
-                </div>
+            <div class="product-Wrapper" id="bestSeller">
             </div>
         </div>
     </section>

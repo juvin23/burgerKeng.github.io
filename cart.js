@@ -10,6 +10,7 @@ function initItems(){
     const CART = getLocal(CART_KEY);
     
     $('#cart-View').empty();
+
     if(!CART || Object.keys(CART).length == 0){
         alert("you have nothing in your cart");
         window.location.href ="order.html";
@@ -51,12 +52,12 @@ function increase(id){
 }
 function decrease(id){  
     const storage = getLocal(CART_KEY);
-    storage.find((key) =>{
-        if(key.id === id){
-            if(key.total == 1) storage.splice(key,1);
-            else key.total--;
-        }
+    let index = storage.findIndex(key =>{
+        return key.id === id;
     })
+
+    if(storage[index].total === 1)storage.splice(index,1);
+    else storage[index].total--;
     setLocal(CART_KEY,storage);
 }
 
