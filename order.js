@@ -3,10 +3,10 @@ $('document').ready(main)
 const CART_KEY = "CART_STORAGE";
 
 const PRODUCT = [
-    {id:'Burger1', cat:'Burger', name :'Burger Alaska', price : 57000, img : "/imgs/Product/Burger/Burger1.png"},
-    {id:'Burger2', cat:'Burger',name :'Burger Malamute', price : 67000, img : "/imgs/Product/Burger/Burger2.png"},
-    {id:'Burger3', cat:'Burger',name :'Burger Husky', price : 65000, img : "/imgs/Product/Burger/Burger3.png"},
-    {id:'side1', cat:'SideDish',name :'Fries', price : 37000, img : "/imgs/Product/SideDish/fries.png"}
+    {id:'Burger1', cat:'Burger', name :'Burger Alaska', price : 57000, img : "imgs/Product/Burger/Burger1.png"},
+    {id:'Burger2', cat:'Burger',name :'Burger Malamute', price : 67000, img : "imgs/Product/Burger/Burger2.png"},
+    {id:'Burger3', cat:'Burger',name :'Burger Husky', price : 65000, img : "imgs/Product/Burger/Burger3.png"},
+    {id:'side1', cat:'SideDish',name :'Fries', price : 37000, img : "imgs/Product/SideDish/fries.png"}
 ];
 
 const SIDE = [
