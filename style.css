@@ -4,6 +4,7 @@ body {
 
 .container {
     display: flex;
+    background-color: antiquewhite;
     flex-direction: column;
     width: 100vw;
     align-items: center;
@@ -49,7 +50,7 @@ body {
 }
 
 #Panel {
-    background-color: hsla(47, 27%, 80%, 0.644);
+    background-color: antiquewhite;
     font: bold 25px helvetica;
 }
 
@@ -103,9 +104,13 @@ body {
     padding: 10px;
     text-decoration: none;
     text-align: center;
-    color: rgb(38, 0, 255);
+    color: rgb(82, 53, 0);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
+}
+
+.button:active {
+    background-color: rgba(95, 65, 9, 0.041);
 }
 
 #createForm .button {
@@ -150,32 +155,9 @@ Create.html css start here
     background-color: antiquewhite;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.text-Bold {
-    font-weight: bold;
-}
-
-.text-L {
-    font-size: 30px;
-}
-
-
-.text-left {
-    text-align: left;
-}
-
-.match-Dark {
-    color: rgb(99, 62, 7);
-}
-
-.match-title {
-    color: rgb(141, 13, 13);
-}
-
-#createForm table tr.spaceUnder>td {
+#createForm table th,
+tb,
+tr.spaceUnder>td {
     padding-bottom: 20px;
 }
 
@@ -197,10 +179,49 @@ Create.html css start here
     padding-bottom: 20px;
 }
 
+#cart table td {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
 label {
     cursor: pointer;
 }
 
 input {
     cursor: pointer;
+}
+
+/* utils */
+.text-center {
+    text-align: center;
+}
+
+.text-Bold {
+    font-weight: bold;
+}
+
+.text-L {
+    font-size: 35px;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.match-Dark {
+    color: rgb(82, 53, 0);
+}
+
+.match-title {
+    color: rgb(141, 13, 13);
+}
+
+.center {
+    align-items: center;
 }
