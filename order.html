@@ -18,14 +18,11 @@
                 <img src="imgs/logo/logo.png" alt="">
             </a>
         </div>
-        <div class="nav-item">
+        <div class=" nav-item">
             <a href="index.html">Home</a>
         </div>
         <div class="nav-item">
             <a href="gallery.html">Gallery</a>
-        </div>
-        <div class="nav-item">
-            <a href="order.html">Order</a>
         </div>
         <div class="nav-item">
             <a href="create.html">Create Burger</a>
@@ -33,25 +30,54 @@
         <div class="nav-item">
             <a href="ourTeam.html">Our Team</a>
         </div>
-        <div class="nav-item right" style="align-items:right; justify-content: right;">
-            <a href="cart.html">Cart</a>
-        </div>
-    </nav>
 
-    <section class="container" >
-        <h3 class="text-L match-title">Burgers</h3>
-        <hr style="width: 100%;">
-        <div class="product-Wrapper" id="burgerList">
-            
+        <!-- DROPDOWN MENU -->
+        <div class="nav-item dropdown active">
+            <a href="#">Cart</a>
+            <ul class="dropdown-content">
+                <li class="nav-item">
+                    <a href="order.html">Order</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="cart.html">View Cart</a>
+                </li>               
+            </ul>
         </div>
+    </nav> 
 
-        <h3 class="text-L text-Bold match-title">Side Dish</h3>
-        <hr style="width: 100%;">
-    <div class="product-Wrapper" id="sideList">
-        
-    </div>
+    <section class="container">
+        <H1 class="match-title text-L">Order Form</H1>
+        <form action="#" id="orderForm">
+            <table>
+                <tr id="name"> 
+                    <td>First Name</td>
+                    <td><input type="text" name="name" id="orderName"></td>
+                </tr>
+                <tr id="lastName"> 
+                    <td>Last Name</td>
+                    <td><input type="text" name="lastName" id="orderLastName"></td>
+                </tr>  
+                <tr id="email"> 
+                    <td>Email</td>
+                    <td><input type="text" name="email" id="orderEmail"></td>
+                </tr>            
+                <tr id="phone"> 
+                    <td>Phone (Indonesia)</td>
+                    <td>+62 <input type="text"  name="Phone" id="orderPhone"></td>
+                </tr>
+                <tr> 
+                    <td>Address</td>
+                    <td><textarea name="Address" id="orderAddress" cols="30" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="button">Order</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
     </section>
-
 
     <footer>
         <h6>CONNECT WITH US</h6>

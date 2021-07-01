@@ -13,7 +13,7 @@ function initItems(){
 
     if(!CART || Object.keys(CART).length == 0){
         alert("you have nothing in your cart");
-        window.location.href ="order.html";
+        window.location.href ="gallery.html";
         return;
     }
     let grandTotal = 0;

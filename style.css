@@ -21,18 +21,19 @@ body {
     justify-content: flex-start;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-left: 20px;
 }
 
 .nav-item {
-    margin-left: 10px;
-    padding: 8px;
     height: 100%;
+    padding: 10px;
     line-height: 30px;
     text-decoration: none;
     font-size: 20px;
 }
 
 .nav-item a {
+    padding: 10px;
     text-decoration: none;
     line-height: 32px;
 }
@@ -41,12 +42,33 @@ body {
     height: 100%;
 }
 
-.nav-item a.active {
-    color: white;
+.dropdown {
+    padding: 10px;
+    list-style: none;
 }
 
-.right {
-    float: right;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    margin: 0;
+}
+
+.active,
+.nav-item:hover {
+    background-color: #ffffff;
 }
 
 #Panel {
@@ -80,7 +102,7 @@ body {
 .product-Wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -148,11 +170,10 @@ footer img {
 Create.html css start here
 ======================================== */
 #createForm {
-    padding: 20px;
+    padding: 0;
     font-size: 23px;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
 }
 
 #createForm table th,
@@ -185,6 +206,18 @@ tr.spaceUnder>td {
     padding: 10px;
     font-size: 20px;
     text-align: center;
+}
+
+#orderForm table td {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#orderForm {
+    padding: 0 0 100px 0;
 }
 
 
@@ -224,4 +257,8 @@ input {
 
 .center {
     align-items: center;
+}
+
+.right {
+    float: right;
 }

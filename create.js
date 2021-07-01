@@ -2,11 +2,45 @@ let $emptyMsg = "this field cannot be empty";
 let $invalidMsg = "field invalid";
 
 $('document').ready(main);
-
+    
 function main(){
     let BurgerSubmission = document.getElementById("BurgerSubmission");
     
     BurgerSubmission.addEventListener("submit", createBurger)
+}
+
+const CART_KEY = "CART_STORAGE";
+let burgerPrice = 15000;
+let burgerName = "";
+
+function addCart(id){
+    const storage = getLocal(CART_KEY);
+    const newItem = {id:"Custom", cat:'Burger', name: burgerName ,price: burgerPrice, img :"imgs/Product/SideDish/custom.png"};
+    if(!storage){
+
+        newItem.total = 1;
+        setLocal(CART_KEY,[newItem]);
+        return;
+    }else{
+        const exist = storage.find(key =>{
+            if(key.id === id) return key.total++;
+        })
+        if(!exist){
+            newItem.total = 1;
+            storage.push(newItem);
+        }
+        setLocal(CART_KEY,storage);
+    }
+
+}
+
+function setLocal(key,value){
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+
+function getLocal(key){
+    return JSON.parse(localStorage.getItem(key));
 }
 
 function createBurger(e){
@@ -22,6 +56,7 @@ function createBurger(e){
     temp.forEach(element => {
         if (element.checked) {
             sauce.push(element.value);
+            burgerPrice+=5000;
         }
     }); 
 
@@ -29,10 +64,19 @@ function createBurger(e){
     temp.forEach(element => {
         if (element.checked) {
             extras.push(element.value);
+            burgerPrice+=5000;
         }
     }); 
 
-    let bunErr = pattyErr = sauceErr = false;
+    let bunErr = pattyErr = sauceErr = nameErr = false;
+    if(burger.name.value === ""){
+        nameErr = true;
+        document.getElementById("nameErr").innerHTML = $emptyMsg;
+    }else{
+        nameErr = "";
+        burgerName = burger.name.value;
+    }
+
     if(bun === ""){
         bunErr = true;
         document.getElementById("bunErr").innerHTML = $emptyMsg;
@@ -60,6 +104,9 @@ function createBurger(e){
 
     document.getElementById("baseBunImg").innerHTML = "<img src=\"imgs/ingredient/bun/BaseBun.png\">";
     document.getElementById("pattyImg").innerHTML = "<img src=\"imgs/ingredient/patty/" + patty + ".png\">";
+    if(patty === "Chicken")burgerPrice += 13000;
+    else if(patty === "Beef")burgerPrice += 16000;
+    else burgerPrice += 14000;
     document.getElementById("topBunImg").innerHTML = "<img src=\"imgs/ingredient/bun/TopBun.png\">";
     
     document.getElementById("extrasImg").innerHTML="";
@@ -75,4 +122,8 @@ function createBurger(e){
         `
     });
     document.getElementById("sauceChoice").innerHTML +="</ul>";
+    
+    if(!(document.getElementById('addButton')))$('#preview').append(
+        '<button class="button" id="addButton" onClick = addCart("CustomBurger") style="padding: 10px;align-items: center">Add to Cart</button>'
+    )
 }
