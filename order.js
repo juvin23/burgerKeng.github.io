@@ -4,6 +4,14 @@ const CART_KEY = "CART_STORAGE";
 const ORDER_KEY = "ORDER_STORAGE";
 
 function main(){
+    const CART = getLocal(CART_KEY);
+    
+    if(!CART || Object.keys(CART).length == 0){
+        alert("you have nothing in your cart");
+        window.location.href ="gallery.html";
+        return;
+    }
+
     let orderForm = document.getElementById('orderForm');
     orderForm.addEventListener("submit", order);
 }
@@ -18,6 +26,7 @@ function isNumeric(s){
 
 function validate(e){
     let form = e.target;
+
     let name = form.elements['orderName'].value.trim();
     let lastName = form.elements['orderLastName'].value.trim();
     let email = form.elements['orderEmail'].value.trim();
@@ -104,6 +113,7 @@ function order(e){
         setLocal(ORDER_KEY,orderData);
     }
     window.localStorage.removeItem(CART_KEY);
+    document.getElementById('orderForm').reset();
     window.open("https://api.whatsapp.com/send/?phone=%2B6287881814150&text=hai,%20saya%20melakukan%20Order%20dengan%20Order%20ID%20"+ id  +"&app_absent=0")
 }
 
