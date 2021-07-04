@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Keng</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery.js"></script>
-    <script src="gallery.js"></script>   
+
+    <!-- Font Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Library -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript Library -->
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </head>
 
 <body>
+    <canvas width = "700px" height = "700px" id="canvas"></canvas>
     <nav class="navbar">
         <div class="nav-item">
             <a href="index.html">
@@ -60,14 +72,20 @@
     </section>
 
 
-    <footer>
+    <footer class="footer">
         <h6>CONNECT WITH US</h6>
-        <div>
-            <a href="https://www.facebook.com">
-                <img src="imgs/SocMed/fb.png" alt="">
+        <div class="social">
+            <a href="https://www.facebook.com" class="sosmed" >
+                <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com">
-                <img src="imgs/SocMed/ig.png" alt="">
+            <a href="https://www.instagram.com"class="sosmed" >
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com" class="sosmed">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://twitter.com/twitter" class="sosmed">
+                <i class="fab fa-twitter"></i>
             </a>
         </div>
         <div>

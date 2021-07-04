@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Keng</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery.js"></script>
-    <script src="index.js"></script>
+
+    <!-- Font Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Library -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript Library -->
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
+    <canvas width = "700px" height = "700px" id="canvas"></canvas>
     <nav class="navbar">
         <div class="nav-item">
             <a href="index.html">
@@ -47,10 +59,28 @@
         </div>
     </nav> 
 
+    <section id="Banner">
+        <div class="Banner">
+            <div class="bannerbtn">
+                <i class="fa fa-chevron-circle-left prev" aria-hidden="true"></i>
+            </div>
+            <div class="banner-slider">
+                <img src="imgs/Banner/banner1.jpg" class="active-img" alt="">
+                <img src="imgs/Banner/banner2.jpg" alt="">
+                <img src="imgs/Banner/banner3.jpg" alt="">
+                <img src="imgs/Banner/banner4.jpg" alt="">
+            </div>
+            <div class="bannerbtn">
+                <!-- <img src="imgs/Banner/right.png" class="next" alt="next"> -->
+                <i class="fa fa-chevron-circle-right next" aria-hidden="true"></i>
+            </div>
+        </div>
+    </section>
+
     <section id="Panel">
-            <div class="container">
-                <h3 class="match-title text-L">Recomendation</h3>
-                <hr style="width: 100%;">
+        <div class="container">
+            <h3 class="match-title text-L">Recomendation</h3>
+            <hr style="width: 100%;">
 
             <div class="product-Wrapper" id="recomendation">
                 
@@ -60,19 +90,25 @@
             <hr style="width: 100%;">
 
             <div class="product-Wrapper" id="bestSeller">
-            </div>
+        </div>
         </div>
     </section>
 
 
-    <footer>
+    <footer class="footer">
         <h6>CONNECT WITH US</h6>
-        <div>
-            <a href="https://www.facebook.com">
-                <img src="imgs/SocMed/fb.png" alt="">
+        <div class="social">
+            <a href="https://www.facebook.com" class="sosmed" >
+                <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com">
-                <img src="imgs/SocMed/ig.png" alt="">
+            <a href="https://www.instagram.com"class="sosmed" >
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com" class="sosmed">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://twitter.com/twitter" class="sosmed">
+                <i class="fab fa-twitter"></i>
             </a>
         </div>
         <div>
