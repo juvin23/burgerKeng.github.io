@@ -14,6 +14,7 @@ body {
 
 .navbar {
     position: relative;
+    overflow: auto;
     height: 32px;
     background-color: rgb(216, 216, 202);
     display: flex;
@@ -256,4 +257,11 @@ input {
 
 .right {
     float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
 }
