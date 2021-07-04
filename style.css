@@ -210,16 +210,11 @@ tr.spaceUnder>td {
 
 #orderForm table td {
     border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
     font-size: 20px;
     text-align: center;
 }
-
-#orderForm {
-    padding: 0 0 100px 0;
-}
-
 
 label {
     cursor: pointer;
