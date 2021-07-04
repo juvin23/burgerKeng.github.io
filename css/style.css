@@ -15,7 +15,7 @@ body {
     margin: 0;
 }
 
-.con-margin{
+.con-margin {
     padding-top: 10px;
 }
 
@@ -34,7 +34,7 @@ body {
 
 .nav-item {
     display: flex;
-	align-items: center;
+    align-items: center;
     justify-content: center;
     height: 100%;
     padding: 10px;
@@ -64,7 +64,8 @@ body {
     position: absolute;
     margin: 0;
     top: 0px;
-    background-color: antiquewhite;;
+    background-color: antiquewhite;
+    ;
     padding: 10px;
     list-style-type: none;
     z-index: 30;
@@ -79,13 +80,14 @@ body {
     padding: 10px;
     margin: 0;
 }
+
 /* ,
 .nav-item:hover */
 .active {
     background-color: hsl(0, 0%, 100%);
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: red;
 }
 
@@ -177,25 +179,25 @@ body {
     height: 20px;
     margin-top: 5px;
     margin-left: 5px;
-    
+
 }
 
-.sosial{
+.sosial {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sosmed{
+.sosmed {
     /* display: block; */
     /* background-color: #f1d7b1; */
     padding: 5px;
     border: 5px;
     height: 56px;
-    
+
 }
 
-.sosmed i{
+.sosmed i {
     color: #f1d7b1;
     font-size: 48px;
 }
@@ -303,31 +305,32 @@ input {
     float: right;
 }
 
-#Banner{
+#Banner {
     width: 100vw;
     font-size: 20px;
 }
 
-.Banner{
+.Banner {
     position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 90vh;
-    background-color: #f1d7b1;;
+    background-color: #f1d7b1;
+    ;
 }
 
-.bannerbtn{
+.bannerbtn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.bannerbtn:hover{
-    color:antiquewhite;
+.bannerbtn:hover {
+    color: antiquewhite;
 }
 
-.banner-slider{
+.banner-slider {
     display: flex;
     justify-content: center;
     position: relative;
@@ -338,19 +341,20 @@ input {
     padding: 3px;
 }
 
-.banner-slider img{
+.banner-slider img {
     display: none;
     padding: 8px;
     height: 95%;
     width: 100%;
 }
 
-.banner-slider img.active-img{
+.banner-slider img.active-img {
     display: inline-block;
     padding: 16px;
 }
 
-.next, .prev{
+.next,
+.prev {
     font-size: 5em;
     display: flex;
     align-items: center;
@@ -358,15 +362,22 @@ input {
     z-index: 20;
 }
 
-.prev{
+.prev {
     margin-right: -100%;
 }
-.next{
+
+.next {
     margin-left: -100%;
 }
 
-#canvas{
+#canvas {
     position: absolute;
+}
+
+@media screen and (max-width:700px) {
+    .navbar {
+        flex-direction: column;
+    }
 }
 
 /* .prev, .next{
