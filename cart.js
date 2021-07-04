@@ -44,7 +44,6 @@ function initItems(){
 
 function increase(id){  
     const storage = getLocal(CART_KEY);
-    console.log(storage);
     storage.find(key =>{
         if(key.id === id) return key.total++;
     })

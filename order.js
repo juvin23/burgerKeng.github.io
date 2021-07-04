@@ -114,6 +114,7 @@ function order(e){
     }
     window.localStorage.removeItem(CART_KEY);
     document.getElementById('orderForm').reset();
+    window.location.href ="index.html";
     window.open("https://api.whatsapp.com/send/?phone=%2B6287881814150&text=hai,%20saya%20melakukan%20Order%20dengan%20Order%20ID%20"+ id  +"&app_absent=0")
 }
 
