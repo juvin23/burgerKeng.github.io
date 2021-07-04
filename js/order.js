@@ -13,9 +13,8 @@ function main(){
     }
 
     let orderForm = document.getElementById('orderForm');
-    orderForm.addEventListener("submit", order);
+    orderForm.addEventListener("submit", order);  
 }
-
 function isNumeric(s){
     let num =['0','1','2','3','4','5','6','7','8','9','0'];
 
@@ -99,8 +98,8 @@ function validate(e){
 }
 
 function order(e){
-    e.preventDefault();
     if(!validate(e)) return;
+
     const newOrder = getLocal(CART_KEY);
     const orderData = getLocal(ORDER_KEY);
     let id = 0;
@@ -114,8 +113,8 @@ function order(e){
         setLocal(ORDER_KEY,orderData);
     }
     window.localStorage.removeItem(CART_KEY);
-    document.getElementById('orderForm').reset();
-    window.open("https://api.whatsapp.com/send/?phone=%2B6287881814150&text=hai,%20saya%20melakukan%20Order%20dengan%20Order%20ID%20"+ id  +"&app_absent=0")
+    window.open("https://api.whatsapp.com/send/?phone=%2B6287881814150&text=hai,%20saya%20melakukan%20Order%20dengan%20Order%20ID%20"+ id  +"&app_absent=0");
+
 }
 
 function getOrder(){
@@ -128,8 +127,4 @@ function setLocal(key,value){
 
 function getLocal(key){
     return JSON.parse(localStorage.getItem(key));
-}
-
-function getItem(key){
-    return localStorage.getItem(key);
 }
