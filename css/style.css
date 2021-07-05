@@ -23,7 +23,6 @@ body {
     position: relative;
     height: 40px;
     width: 100vw;
-    overflow: hidden;
     /* background-color: rgb(216, 216, 202); */
     background-color: #f1d7b1;
     display: flex;
@@ -31,6 +30,7 @@ body {
     justify-content: flex-start;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    z-index: 30;
 }
 
 .nav-item {
@@ -52,6 +52,21 @@ body {
 }
 
 .nav-item img {
+    height: 48px;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-toggle img {
     height: 48px;
 }
 
@@ -336,7 +351,6 @@ input {
     position: relative;
     overflow: hidden;
     float: left;
-    height: 100%;
     width: 100%;
     padding: 3px;
 }
@@ -344,7 +358,6 @@ input {
 .banner-slider img {
     display: none;
     padding: 8px;
-    height: 95%;
     width: 100%;
 }
 
@@ -377,16 +390,19 @@ input {
 @media screen and (max-width:700px) {
     .navbar {
         flex-direction: column;
-        display: block;
-        z-index: 11;
     }
 
-    .navbar:hover {
-        overflow: visible;
+    .nav-item {
+        display: none;
+    }
+
+    .menu-toggle:hover~.nav-item {
+        display: flex;
     }
 
     .nav-item {
         background-color: antiquewhite;
+        width: 100%;
     }
 }
 
