@@ -1,8 +1,8 @@
-const MAX_IDLE_TIME = 10; //second
+const MAX_IDLE_TIME = 10 ; //second
 var idleTime = 0;
 setInterval(function(){
     idleTime++;
-    console.log(idleTime); 
+    
     window.addEventListener('load', resetTimer, true);
     let events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'onclick', 'onkeydown','onload'];
     events.forEach(function(name) {
@@ -52,7 +52,7 @@ window.onload = () =>{
 
     setInterval(function(){
         if (idleTime > MAX_IDLE_TIME){
-            canvas.style.zIndex = "30";
+            canvas.style.zIndex = "50";
             requestAnimationFrame(render);
         }
         else{
