@@ -76,6 +76,7 @@ function createBurger(e){
     }else{
         nameErr = "";
         burgerName = burger.name.value;
+        document.getElementById("nameErr").innerHTML = "";
     }
 
     if(bun === ""){
@@ -101,7 +102,7 @@ function createBurger(e){
         bunErr = false;
         document.getElementById("sauceErr").innerHTML = "";
     }
-    if(bunErr || pattyErr || sauceErr) return;
+    if(nameErr || bunErr || pattyErr || sauceErr) return;
 
     document.getElementById("baseBunImg").innerHTML = "<img src=\"imgs/ingredient/bun/"+ bun +"BaseBun.png\">";
     document.getElementById("pattyImg").innerHTML = "<img src=\"imgs/ingredient/patty/" + patty + ".png\">";
